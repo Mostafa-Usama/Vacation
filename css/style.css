@@ -7,6 +7,15 @@ body{
 
 }
 
+.btn-success{
+    background-color: rgb(41, 192, 41);
+    border: none;
+}
+.btn-success:hover{
+    background-color: rgb(6, 184, 15);
+}
+
+
 .land{
     height: 100vh;
     background-image: url(../images/vaction1.jpg) ;
@@ -26,6 +35,54 @@ body{
 }
 .nav-link{
     font-size: 20px;
+    position: relative;
+    z-index: 10;
+}
+.nav-item{
+    position: relative;
+}
+.nav-item::after{
+    content: "";
+    position: absolute;
+    height: 00%;
+    width: 0%;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+    /* border-radius: 10%; */
+
+}
+.nav-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+}
+.nav-item::before {
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
+    opacity: 0;
+    transition: .5s;
+    /* border-radius: 10%; */
+
+}
+
+.nav-item:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-bottom: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
 }
 .overlay{
     position: relative;
@@ -97,7 +154,7 @@ span{
     height: 0%;
     bottom: 0;
     right:0%;
-    background-color: rgb(144, 255, 144);
+    background-color: rgba(144, 255, 144, 0.616);
    
 }
 .choose-card::after {
@@ -109,7 +166,7 @@ span{
     height: 0%;
     top: 0;
     left: 0%;
-    background-color: rgb(144, 255, 144);
+    background-color: rgba(144, 255, 144, 0.521);
 
 }
 .choose-card:hover::before, .choose-card:hover::after{
@@ -131,8 +188,14 @@ span{
     box-shadow: 0px 0px 30px 1px rgb(175, 173, 173);
     
 }
+
 .con{
+    border-left: 6px solid var(--primary);
     transition: .5s;
+}
+.mid{
+    border-right: 6px solid var(--primary);
+    border-left: none;
 }
 .pop-title{
     width: fit-content;
@@ -212,4 +275,29 @@ span{
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
+}
+
+.foot-icon {
+    font-size: 20px;
+    border-radius: 50%;
+    /* background-color: var(--primary); */
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    /* margin-top: 10%; */
+}
+footer li {
+    font-size: 14px;
+    color: white;
+    list-style: none;
+    margin: 15px 0;
+
+}
+footer a{
+    text-decoration: none;
+}
+
+footer li:hover {
+    text-decoration: underline;
 }

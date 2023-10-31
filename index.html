@@ -11,46 +11,68 @@
 <body>
 
   <nav class="navbar navbar-expand-lg p-2 bg-dark"  data-bs-theme="dark" >
-  <div class="container-fluid ">
-    <a class="a-header navbar-brand grad px-5" href="#"> <i class="fas fa-umbrella-beach"></i> Vacation</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-      <ul class="navbar-nav px-5  mb-2 mb-lg-0 ">
-        <li class="nav-item text-white ">
-          <a class="nav-link text-white mx-3" aria-current="page" href="#Home">Home</a>
-        </li>
-        <li class="nav-item  ">
-          <a class="nav-link text-white mx-3" href="#Services">Services</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link text-white mx-3 " href="#Gallery">Gallery</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link text-white mx-3 " href="#Book">Book Now</a>
-        </li>
-        <li class="nav-item  dropdown ">
-          <a class="nav-link text-white mx-3 dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            More
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li> -->
-      </ul>
-      <div>
-              <button class=" btn btn-success mx-5">Start Now</button>
-              <button class=" btn btn-success px-4">Login</button>
-  </div>
+    <div class="container-fluid ">
+      <a class="a-header navbar-brand grad px-5" href="#"> <i class="fas fa-umbrella-beach"></i> Vacation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav px-5  mb-2 mb-lg-0 ">
+          <li class="nav-item mx-2 text-white ">
+            <a class="nav-link text-white mx-3" aria-current="page" href="#Home">Home</a>
+          </li>
+          <li class="nav-item mx-2  ">
+            <a class="nav-link text-white mx-3" href="#Services">Services</a>
+          </li>
+          <li class="nav-item mx-2 ">
+            <a class="nav-link text-white mx-3 " href="#Gallery">Gallery</a>
+          </li>
+          <li class="nav-item mx-2  ">
+            <a class="nav-link text-white mx-3 " href="#Book">Book Now</a>
+          </li>
+          
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li> -->
+        </ul>
+        <div>
+      <button class=" btn btn-success mx-5">Start Now</button>
+      <button type="button" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Login
+      </button>
+      <div class="modal fade text-white " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 " id="exampleModalLabel">Pleaes Fill Your Information</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-3 col-form-label">User Name</label>
+                <div class="col-sm-9">
+                  <input type="text"  class="form-control"  required id="staticEmail">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" required  id="inputPassword">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary m-auto w-25" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-success m-auto w-25">Login</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+      </div>
+    </div>
   </nav>
 
   <main id="Home">
@@ -210,10 +232,10 @@
     <div class="container-fluid bg-secondary bg-opacity-10">
       <div class="container-lg py-5">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <img class="img-fluid rounded im1" src="./images/vaction4.jpg" alt="">
           </div>
-          <div class="col-md-6 p-3">
+          <div class="col-lg-6 p-3">
             <h2 class=" grad title text-success w-75 pb-3"><span>&bull;</span> All Around The World <span>&bull;</span>
             </h2>
             <p class=" opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vel quod voluptatem aut
@@ -434,87 +456,9 @@
     </div>
   </section>
 
-<!-- <section>
-  <h2 class="grad title text-center py-5 text-success"><span>&bull;</span> Wanna Have A Drink? <span>&bull;</span></h2>
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-lg-3  my-4 my-lg-0 ">
-        <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
-          <img src="./images/drink10.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Orange Juice</h5>
-            <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
-            <p class="card-text p-0 m-1">
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-            </p>
-            <p class="drink-p p-0"> $5.99</p>
-            <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3  my-4 my-lg-0 ">
-        <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
-          <img src="./images/drink4.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Strawberry Juice</h5>
-            <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
-            <p class="card-text p-0 m-1">
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-            </p>
-            <p class="drink-p p-0"> $4.99</p>
-            <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3  my-4 my-lg-0 ">
-        <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
-          <img src="./images/drink7.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Mango Juice</h5>
-            <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
-            <p class="card-text p-0 m-1">
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-            </p>
-            <p class="drink-p p-0"> $7.99</p>
-            <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3  my-4 my-lg-0 ">
-        <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
-          <img src="./images/drink5.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Coconut Juice</h5>
-            <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
-            <p class="card-text p-0 m-1">
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-            </p>
-            <p class="drink-p p-0"> $9.99</p>
-            <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
-  <section id="Book">
+
+  <section id="Book" class="">
     <div class="container-fluid book p-0">
       <div class="overlay p-5">
         <div class="container ">
@@ -559,7 +503,8 @@
               </div>
             </div> -->
             <div class="col-12 text-center mt-5">
-              <button class="btn btn-success " type="button">Book My Tickets</button>
+            <button type="button" class="btn btn-success" >Book My Tickets</button>
+
             </div>
           </div>
         </form>
@@ -567,10 +512,142 @@
     </div>
   </div>
   </section>
+  
 
+  <section>
+    <h2 class="grad title text-center py-5 text-success"><span>&bull;</span> Wanna Have A Drink? <span>&bull;</span></h2>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-3  my-4 my-lg-0 ">
+          <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
+            <img src="./images/drink10.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Orange Juice</h5>
+              <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
+              <p class="card-text p-0 m-1">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </p>
+              <p class="drink-p p-0"> $5.99</p>
+              <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  my-4 my-lg-0 ">
+          <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
+            <img src="./images/drink4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Strawberry Juice</h5>
+              <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
+              <p class="card-text p-0 m-1">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </p>
+              <p class="drink-p p-0"> $4.99</p>
+              <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  my-4 my-lg-0 ">
+          <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
+            <img src="./images/drink7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mango Juice</h5>
+              <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
+              <p class="card-text p-0 m-1">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </p>
+              <p class="drink-p p-0"> $7.99</p>
+              <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  my-4 my-lg-0 ">
+          <div class="card card-rest p-2 border-3 bg-body-secondary bg-opacity-75">
+            <img src="./images/drink5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Coconut Juice</h5>
+              <p class="card-text">Lorem, ipsum dolor sit elit. Voluptatum, alias.</p>
+              <p class="card-text p-0 m-1">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+              </p>
+              <p class="drink-p p-0"> $9.99</p>
+              <button class="btn btn-success mt-4 d-block m-auto w-75">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container-fluid text-white bg-dark p-5">
+      <div class="row">
+        <div class="col-lg-3 col-6">
+          <h3>Contact Us</h3>
+          <div class="foot-icons mt-3 ">
+            <a href=""><i class="fab fa-facebook foot-icon text-center btn-success "></i></a>
+            <a href=""><i class="fab fa-twitter foot-icon text-center btn-success"></i></a>
+            <a href=""><i class="fab fa-youtube foot-icon text-center btn-success"></i></a>
+            <a href=""><i class="fab fa-linkedin-in foot-icon text-center btn-success"></i></a>
+            <a href=""><i class="fab fa-instagram foot-icon text-center btn-success"></i></a>
+            <a href=""><i class="fab fa-google-plus-g foot-icon text-center btn-success"></i></a>
+          </div>
+          <ul>
+            <a href=""><li><i class="fas fa-map-marker-alt contact"></i> Egypt-Assiut</li></a>
+            <a href=""><li><i class="fas fa-phone-alt contact"></i> 01012345678</li></a>
+            <a href=""><li><i class="far fa-envelope contact"></i> contact@example.com</li></a>
+          </ul>
+          </div>
+          <div class="col-lg-3 col-6">
+            <h3>Information</h3>
+            <ul>
+              <a href=""><li>What We Offer</li></a>
+              <a href=""><li>Partners</li></a>
+              <a href=""><li>Careers</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-6 p-0 m-0">
+            <h3 >Community</h3>
+            <ul>
+              <a href=""><li>Learners</li></a>
+              <a href=""><li>Center</li></a>
+              <a href=""><li>Press</li></a>
+              <a href=""><li>Blog</li></a>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-6 m-0 p-0">
+              <ul>
+                <h3>Terms</h3>
+                <a href=""><li>Services</li></a>
+                <a href=""><li>Help</li></a>
+                <a href=""><li>Articles</li></a>
+                <a href=""><li>Accessibility</li></a>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
   <script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
 
 
