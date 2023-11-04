@@ -16,13 +16,13 @@ body{
 }
 
 
-.land{
+/* .land{
     height: 100vh;
     background-image: url(../images/vaction1.jpg) ;
     background-size:cover;
-    /* background-position: bottom; */
+    background-position: bottom;
     width: 100%;
-}
+} */
 /* .land::after{
     content: '';
     position: absolute;
@@ -84,11 +84,12 @@ body{
     border-bottom: 2px solid var(--primary);
     border-right: 2px solid var(--primary);
 }
-.overlay{
+.overlay, .overlay2{
     position: relative;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.527);
+
 }
 .grad{
     background-image: -webkit-linear-gradient(to right,rgb(89, 233, 89), rgb(52, 248, 13), rgb(0, 255, 128));
@@ -102,6 +103,7 @@ body{
     -ms-text-fill-color: transparent;
 
 }
+
 .price{
     font-family: "Caveat", sans-serif;   
     font-size: 30px;
@@ -253,9 +255,48 @@ span{
     left: 0;
     background-color: rgba(0, 0, 0, 0.336);
 } */
-.gal-img{
+.img-overlay{
+
+    top: 0;
+    left: 2.5%;
+    position: absolute;
+    width: 95%;
     height: 100%;
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.452);
+    opacity: 0;
+    transition: .5s;
+    
+}
+.img-overlay:hover{
+    
+    opacity: 1;
+
+}
+.overlay2{
+    background: linear-gradient(to bottom, rgb(34, 41, 34), rgba(107, 107, 107, 0.637));
+    /* transition: .5s; */
+}
+.card1, .card2, .card3{
+    background-size: cover;
+    transition: .5s;
+}
+.card1{
+    background-image: url(../images/vaction2.jpg);
+}
+.card2{
+    background-image: url(../images/vaction3.jpg);
+}
+.card3{
+    background-image: url(../images/vaction4.jpg);
+}
+.card1:hover, .card2:hover, .card3:hover{
+    
+    transform: scale(.9);
+}
+
+.card1:hover .overlay2, .card2:hover .overlay2, .card3:hover .overlay2{
+
+    background: linear-gradient(to bottom, rgb(82, 155, 82), rgba(67, 143, 92, 0.637));
 }
 .grow{
     background-image: url(../images/vaction3.jpg);
@@ -270,6 +311,8 @@ span{
 .num{
     color: var(--primary);
 }
+
+
 .book{
     background-image: url(../images/vaction5.jpg);
     background-size: cover;
@@ -301,3 +344,4 @@ footer a{
 footer li:hover {
     text-decoration: underline;
 }
+
