@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Vacation</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Dancing+Script:wght@700&family=Sansita+Swashed:wght@400;500&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
 
@@ -522,6 +523,20 @@
   </section>
 
 
+  <section>
+    <h2 class="title grad text-center"><span>&bull;</span> Limited Offer! <span>&bull;</span></h2>
+    <div class="container coupon-bg text-center bg-secondary bg-opacity-10 rounded position-relative p-0">
+      <div class="overlay rounded ">
+        <h5 class="py-4 text-white px-5">For Only The Next 24 Hours, Copy The Coupon Code Below And Receive A Discount Up To 20%! </h5>
+        <input type="text" readonly value="XEA5-W3FJ-Q3EH-AD8M" id="coupon" class="rounded border-1 px-2 my-4 ">
+        <button class="btn btn-success position-relative d-block m-auto px-4" id="copy-btn">
+          <div class="position-absolute w-75 h-75 bg-opacity-75 start-50 translate-middle-x rounded toolt" id="toolt" style="bottom: 105%;">Click To Copy</div>
+          Copy Coupon!</button>
+          <h5 class="py-4 text-white px-5"> Don't Forget To Use This Coupon When Booking Your Tickets!</h5>
+        <h5 class="py-3 text-white px-5">Just Because We Value Our Customers! </h5>
+      </div>
+    </div>
+  </section>
 
   <section id="Book" class="">
     <div class="container-fluid book p-0">
@@ -531,20 +546,20 @@
         <form class=" g-3">
           <div class="row justify-content-center">
             <div class="col-md-4">
-              <label for="validationDefault01" class="form-label text-white ">Full Name</label>
-              <input type="text" class="form-control" id="validationDefault01" required>
+              <label for="fullName" class="form-label text-white ">Full Name</label>
+              <input type="text" class="form-control" id="fullName" required>
             </div>
           
           
             <div class="col-md-4">
-              <label for="validationDefault03" class="form-label text-white">Phone Number</label>
-              <input type="number" class="form-control" id="validationDefault03" required>
+              <label for="phoneNum" class="form-label text-white">Phone Number</label>
+              <input type="number" class="form-control" id="phoneNum" required>
             </div>
           </div>
           <div class="row justify-content-center my-3">
             <div class="col-md-4">
-              <label for="validationDefault04" class="form-label text-white">Location</label>
-              <select class="form-select" id="validationDefault04" required>
+              <label for="locations" class="form-label text-white">Location</label>
+              <select class="form-select" id="locations" required>
                 <option selected disabled value="">Choose...</option>
                 <option>Chicago</option>
                 <option>Madrid</option>
@@ -555,8 +570,12 @@
               </select>
             </div>
             <div class="col-md-4">
-              <label for="validationDefault03" class="form-label text-white">Number Of Tickets</label>
-              <input type="number" class="form-control" min="1" id="validationDefault03" required>
+              <label for="numOfTickets" class="form-label text-white">Number Of Tickets</label>
+              <input type="number" class="form-control" min="1" id="numOfTickets" required>
+            </div>
+            <div class="col-md-5 mt-2">
+              <label for="code" class="form-label text-white">Coupon Code</label>
+              <input type="text" class="form-control" min="1" id="code">
             </div>
             
             <!-- <div class="col-12 text-center">
@@ -568,8 +587,47 @@
               </div>
             </div> -->
             <div class="col-12 text-center mt-5">
-            <button type="button" class="btn btn-success" >Book My Tickets</button>
-
+            <button type="button" id="bookBtn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+              Book My Tickets
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog ">
+                <div class="modal-content bg-dark text-white">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body ">
+                    <h6 id="name"></h6>
+                    <h6 id="phone"></h6>
+                    <h6 id="location"></h6>
+                    <h6 id="tickets"></h6>
+                    <h6 id="discount"></h6>
+                    <h6 id="cost"></h6>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success"  data-bs-dismiss="modal"  id="liveToastBtn">Confirm</button>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div id="liveToast" class="toast bg-success text-white" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header bg-success text-white">
+                  <i class="fas fa-check-circle mx-2"></i>
+                  <strong class="me-auto">Success</strong>
+                  <small>1 min ago</small>
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                  Your Tickets Have Been Booked Succesfully!
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </form>
@@ -662,9 +720,25 @@
   </footer>
 
 
-  <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="js/bootstrap.min.js"></script>
   
+  <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+      const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+          toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+          })
+        }
+  </script>
+
 </body>
 
 

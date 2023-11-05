@@ -344,4 +344,18 @@ footer a{
 footer li:hover {
     text-decoration: underline;
 }
+.coupon-bg{
+    background-image: url("../images/island2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
 
+.toolt{
+    background-color: var(--primary);
+    opacity: 0;
+}
+#copy-btn:hover .toolt{
+    transition: .5s;
+    opacity: 1;
+}
